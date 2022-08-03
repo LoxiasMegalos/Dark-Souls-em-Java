@@ -1,5 +1,9 @@
 package main.inimigos;
 
-public class CavaleiroPrata {
+public class CavaleiroPrata extends Inimigo{
+    
+    public CavaleiroPrata(String nome, double vida, String tipoArma){
+        super(nome, vida, tipoArma);
+    }
     
 }
