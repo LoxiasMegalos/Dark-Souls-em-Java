@@ -1,6 +1,6 @@
 package main.inimigos;
 
-public class Inimigo{
+public abstract class Inimigo{
 
     protected String nome;
 	protected double vida;
@@ -18,6 +18,8 @@ public class Inimigo{
 		this.vida -= dano;
 	}
 
+	public abstract String atacando();
+	
 	public String getNome(){
 		return this.nome;
 	}
