@@ -1,7 +1,7 @@
 package main.jogador;
 import main.inimigos.Inimigo;
 
-public class Jogador {
+public abstract class Jogador {
     
     private String nome;
     private double vida;
@@ -13,9 +13,10 @@ public class Jogador {
         this.arma = arma;
     }
 
-    public String atacar(Inimigo inimigo){
-        inimigo.tomarDano(10);
-        return "Atacando o inimigo " + inimigo.getNome();
-    }
+    public String mostraStatus(){
+		return "Nome: " + this.nome + "\nVida: "+ this.vida + "\nTipo de Arma: " + this.arma;
+	}
+
+    public abstract String atacar(Inimigo inimigo);
 
 }
