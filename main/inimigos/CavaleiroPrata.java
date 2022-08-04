@@ -1,6 +1,8 @@
 package main.inimigos;
 
-public class CavaleiroPrata extends Inimigo{
+import main.Interfaces.Curavel;
+
+public class CavaleiroPrata extends Inimigo implements Curavel{
     
     public CavaleiroPrata(String nome, double vida, String tipoArma){
         super(nome, vida, tipoArma);
@@ -13,5 +15,10 @@ public class CavaleiroPrata extends Inimigo{
 
     public String ataquePesado(){
         return "Ataque pesado no jogador!";
+    }
+
+    @Override
+    public void recuperaVida() {
+        this.vida += 25;
     }
 }

@@ -48,5 +48,13 @@ public class InimigoTest {
         Inimigo cavaleiro = new CavaleiroPrata("batman", 280, "Espada Encantada");
         assertEquals("Nome: batman" + "\nVida: 280.0" + "\nTipo de Arma: Espada Encantada", cavaleiro.mostraInfo());
     }
+
+    @Test
+    public void testaCuraCavaleiroPrata(){
+        CavaleiroPrata cavaleiro = new CavaleiroPrata("batman", 280, "Espada Encantada");
+        assertEquals("Nome: batman" + "\nVida: 280.0" + "\nTipo de Arma: Espada Encantada", cavaleiro.mostraInfo());
+        cavaleiro.recuperaVida();
+        assertEquals("Nome: batman" + "\nVida: 305.0" + "\nTipo de Arma: Espada Encantada", cavaleiro.mostraInfo());
+    }
 	
 }

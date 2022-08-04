@@ -4,7 +4,7 @@ import main.inimigos.Inimigo;
 public abstract class Jogador {
     
     private String nome;
-    private double vida;
+    protected double vida;
     private String arma;
 
     public Jogador(String nome, double vida, String arma){
